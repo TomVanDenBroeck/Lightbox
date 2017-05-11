@@ -9,20 +9,14 @@
 }
 
 .column {
-  /*float: left;*/
   width: 23%;
   display: inline-block;
-
-  /*-webkit-transition: all 0.7s ease;
-          transition: all 0.7s ease;*/
-
 }
 
 img{width:100%;}
 
 /* The Modal (background) */
 .modal {
-  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -63,8 +57,10 @@ img{width:100%;}
 
 .mySlides {
   display: none;
-   /*height: 80%;*/
-  display: inline-block;
+}
+
+.mySlides.visible {
+  display: block;
 }
 
 .mySlidesOff {
@@ -133,4 +129,3 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
- No newline at end of file
