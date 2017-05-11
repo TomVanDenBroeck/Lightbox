@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LightBoxOneComponent } from './light-box-one.component';
-import { LightBoxOneSingleComponent } from './light-box-one-single.component';
+
+import { LightboxComponent } from './lightbox';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LightBoxOneComponent,
-    LightBoxOneSingleComponent
+    LightboxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,10 @@
-import { LightBoxPage } from './app.po';
+import { LightboxPage } from './app.po';
 
-describe('light-box App', function() {
-  let page: LightBoxPage;
+describe('lightbox App', () => {
+  let page: LightboxPage;
 
   beforeEach(() => {
-    page = new LightBoxPage();
+    page = new LightboxPage();
   });
 
   it('should display message saying app works', () => {

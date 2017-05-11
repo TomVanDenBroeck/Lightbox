@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title : string = 'Lightbox - multiple';
-  titleSingle : string = 'Lightbox - single';
+  title = 'app works!';
 }
