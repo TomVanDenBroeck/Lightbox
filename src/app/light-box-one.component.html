@@ -1,0 +1,71 @@
+
+
+<div class="row">
+  <div class="column">
+    <img src="{{LB1_ImagePath}}" (click)="onClick($event);currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="{{LB2_ImagePath}}" (click)="onClick($event);currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="{{LB3_ImagePath}}" (click)="onClick($event);currentSlide(3)" class="hover-shadow">
+  </div>
+ <!-- <div class="column">
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRa-JfM4wTXRuqnLPN4NzNb0ayDN_2O2Dr8M3EaC3TpQLgnq9X9" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>-->
+
+<div class="column">
+    <img src="{{LB4_ImagePath}}" (click)="onClick($event);currentSlide(4)" class="hover-shadow">
+  </div>
+
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" (click)="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides" id="Img1">
+      <div class="numbertext">1 / 4</div>
+        <img src="{{LB1_ImagePath}}" style="width:100%">
+    </div>
+
+    <!--<div class="mySlides">-->
+    <div class="mySlides" id="Img2">
+      <div class="numbertext">2 / 4</div>
+        <img src="{{LB2_ImagePath}}" style="width:100%">
+    </div>
+
+    <div class="mySlides" id="Img3">
+      <div class="numbertext">3 / 4</div>
+        <img src="{{LB3_ImagePath}}" style="width:100%">
+    </div>
+
+    <div class="mySlides" id="Img4">
+      <div class="numbertext">4 / 4</div>
+        <img src="{{LB4_ImagePath}}" style="width:100%">
+    </div>
+
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo" src="{{LB1_ImagePath}}" (click)="currentSlide(1)" alt="The hulk">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="{{LB2_ImagePath}}" (click)="currentSlide(2)" alt="Thor">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="{{LB3_ImagePath}}" (click)="currentSlide(3)" alt="Ironman">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="{{LB4_ImagePath}}" (click)="currentSlide(4)" alt="Captain America">
+    </div>
+  </div>
+</div>
