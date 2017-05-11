@@ -22,7 +22,7 @@ export class AppComponent {
     name: 'image'
   }];
 
-  onCloseLightBox() {
+  onCloseLightbox() {
     console.log('lightbox closed');
   }
 }

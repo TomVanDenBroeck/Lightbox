@@ -2,7 +2,8 @@ import {
   Component,
   EventEmitter,
   Input,
-  Output
+  Output,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { LightboxImage } from './lightbox.types';
@@ -10,9 +11,11 @@ import { LightboxImage } from './lightbox.types';
 @Component({
   selector: 'aui-lightbox',
   templateUrl: './lightbox.component.html',
-  styleUrls: ['./lightbox.component.css']
+  styleUrls: ['./lightbox.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush // only re-render component if inputs have changed, see https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
 })
 export class LightboxComponent {
+  // see https://angular.io/docs/ts/latest/cookbook/component-communication.html
   @Input() images: LightboxImage[] = [];
   @Output() close = new EventEmitter();
 
@@ -24,6 +27,10 @@ export class LightboxComponent {
 
     if (index !== undefined) {
       this.setActiveImage(index);
+    }
+
+    if (!this.lightboxActive) {
+      this.close.emit(); // emit the close event, see https://toddmotto.com/component-events-event-emitter-output-angular-2
     }
   }
 
