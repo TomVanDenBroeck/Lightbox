@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="column" *ngFor="let img of images; let index">
+    <img src="{{img.src}}" alt="{{img.name}}" (click)="openLightbox(index)" class="hover-shadow">
+  </div>
+</div>
+
+<div class="modal" *ngIf="lightboxActive">
+  <span class="close cursor" (click)="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides" *ngFor="let img of images; let index" [ngShow]="index === slideIndex">
+      <div class="numbertext">{{index + 1}} of {{images.length}}</div>
+      <img src="{{img.src}}" alt="{{img.name}}" style="width: 100%" />
+    </div>
+
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column" *ngFor="let img of images; let index">
+      <img class="demo" src="{{img.src}}" (click)="setActiveImage(index)" alt="{{img.name}}">
+    </div>
+  </div>
+</div>
